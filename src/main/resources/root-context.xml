@@ -11,29 +11,27 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <!--<context:property-placeholder location="classpath:**.properties"/>-->
+    <context:property-placeholder location="classpath:/properties/*.properties"/>
     <!-- ** : 모든 경로아래에 있는 것들 -->
 
-    <!--<bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">-->
-        <!--<property name="driver" value="com.mysql.jdbc.Driver"/>-->
-        <!--<property name="url" value="jdbc:mysql://127.0.0.1:3306/userdb1?serverTimezone=UTC"/>-->
-        <!--<property name="username" value="songwon"/>-->
-        <!--<property name="password" value="wlael0928"/>-->
-    <!--</bean>-->
+    <bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
+        <property name="driver" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
 
-    <!--mybatis spring-->
-    <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-        <!--<property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>-->
-    <!--</bean>-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>
+    </bean>
 
-    <!--<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">-->
-        <!--<constructor-arg index="0" ref="sqlSessionFactory"/>-->
-    <!--</bean>-->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
 
-    <!--<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
-
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
 </beans>
