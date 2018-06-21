@@ -34,10 +34,9 @@
                             <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
                         </div>
 
-                        <div style="margin-top: 10px; margin: auto" class="form-group">
+                        <div style="margin-top: 10px; margin: auto; border-top: 1px solid #999; padding-top:20px;" class="form-group">
                             <!-- Button -->
-                                <a id="btn-login" href="#" class="btn btn-success" style="width: 100%;">Login  </a>
-
+                                <a id="btn-login" href="/signin" class="btn btn-success" style="width: 100%;">Login  </a>
                         </div>
                     </form>
 

@@ -29,7 +29,6 @@
             <div class="container-fluid">
                 <h1>AVERAGE DATA</h1>
             </div>
-        </div>
         <!-- /#page-content-wrapper -->
 
     </div>

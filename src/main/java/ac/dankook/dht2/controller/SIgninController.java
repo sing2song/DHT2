@@ -10,4 +10,9 @@ public class SIgninController {
     public String index() {
         return "signin";
     }
+
+    @RequestMapping("signin")
+    public String signin() {
+        return "redirect:/average";
+    }
 }
