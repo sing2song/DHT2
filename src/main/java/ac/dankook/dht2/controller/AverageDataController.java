@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AverageDataController {
     @RequestMapping("")
     public String index() {
-        return "average";
+        return "device";
     }
 }
