@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/signin")
+@RequestMapping("/")
 public class SigninController {
 //    @Autowired
 //    private SignInService signin;
 
-    @RequestMapping("signin")
+    @RequestMapping("")
     public String index() {
         return "signin";
     }
