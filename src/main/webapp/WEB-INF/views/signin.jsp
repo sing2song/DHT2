@@ -20,23 +20,22 @@
 
                 <div style="padding-top:30px" class="panel-body" >
 
-                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <div style=" display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
                     <form id="loginform" class="form-horizontal" role="form">
-
                         <div style="margin-bottom: 25px" class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                            <input id="id" type="text" class="form-control" name="username" value="" placeholder="username or email">
                         </div>
 
                         <div style="margin-bottom: 25px" class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                            <input id="password" type="password" class="form-control" name="password" placeholder="password">
                         </div>
 
-                        <div style="margin-top: 10px; margin: auto; border-top: 1px solid #999; padding-top:20px;" class="form-group">
+                        <div style="margin-top: 10px; margin: auto; border-top: 1px solid #999; padding-top:20px;   " class="form-group">
                             <!-- Button -->
-                                <a id="btn-login" href="/signin" class="btn btn-success" style="width: 100%;">Login  </a>
+                                <a id="btn"  class="btn btn-success" style="width: 100%;">Login  </a>
                         </div>
                     </form>
 
@@ -47,4 +46,5 @@
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/resources/js/signin.js"></script>
 </body>

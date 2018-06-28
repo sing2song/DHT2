@@ -11,10 +11,10 @@
             <a href="/average">AVERAGE DATA</a>
         </li>
         <li>
-            <a href="#">INPUT DATA</a>
+            <a href="/input">INPUT DATA</a>
         </li>
         <li>
-            <a href="#">DEVICE</a>
+            <a href="/device">DEVICE</a>
         </li>
     </ul>
 </div>

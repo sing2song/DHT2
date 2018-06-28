@@ -6,4 +6,4 @@
     <mappers>
         <!--<mapper resource="/mybatis/timeline-mapper.xml"/>-->
     </mappers>
-</configuration>
+</configuration >
