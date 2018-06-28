@@ -17,7 +17,11 @@ public class SigninController {
     public String index() {
         return "signin";
     }
-
+//    @RequestMapping("/get")
+//    public SignIn signin(@RequestParam Integer id) {
+//        SignIn sign=signin.getPost(id);
+//        return sign;
+//    }
 //    @RequestMapping("/signin")
 //    public SignIn signIn(@RequestParam Integer id) {
 //        SignIn sign =signin.getPost(id);
