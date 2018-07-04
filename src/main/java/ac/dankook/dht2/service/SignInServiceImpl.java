@@ -13,8 +13,9 @@ public class SignInServiceImpl implements SignInService {
     @Autowired
     private SignInRepository signInRep;
 
-    public SignIn getPost(Integer id) {
+    public SignIn getPost(String id) {
+        SignIn sign=signInRep.SignIn(id);
         LOGGER.debug("test");
-        return signInRep.SignIn(id);
+        return sign;
     }
 }

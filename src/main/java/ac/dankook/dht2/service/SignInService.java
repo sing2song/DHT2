@@ -4,6 +4,6 @@ import ac.dankook.dht2.data.SignIn;
 import org.springframework.stereotype.Service;
 
 public interface SignInService {
-    SignIn getPost(Integer id);
+    SignIn getPost(String id);
 
 }

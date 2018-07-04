@@ -41,14 +41,14 @@
                     <div class="form-group">
                         <label for="temperature" class="col-md-3 control-label">Temperature</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="temperature" placeholder="Temperature">
+                            <input type="text" id="temperature" class="form-control" name="temperature" placeholder="Temperature">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="humidity" class="col-md-3 control-label">Humidity</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="humidity" placeholder="Humidity">
+                            <input type="text" id="humidity" class="form-control" name="humidity" placeholder="Humidity">
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-
+    <script src="/resources/js/input.js"></script>
 </body>
 
 </html>

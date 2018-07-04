@@ -10,7 +10,7 @@ public class SignInRepositoryImpl implements SignInRepository {
     @Autowired
     public SqlSession sqlSession;
 
-    public SignIn SignIn(Integer id) {
+    public SignIn SignIn(String id) {
         System.out.println("SignIn");
         return sqlSession.selectOne("signinMapper.getPassword", id);
     }

@@ -1,8 +1,9 @@
-'use strict'
+'use strict';
 $('#btn').click(function() {
-    var id=$('#id').val();
-    $.get('/signin?id='+id,function(result) {
-        var password=result.text;
-        alert("id: "+id+", password: "+password);
+    var id = $('#id').val();
+    var password=$('#password').val();
+    $.get('/rest/get?id='+id+'&password='+password, function(result) {
+        var $password=result.password;
+        alert("id: "+id+", password: "+$password);
     });
 });
