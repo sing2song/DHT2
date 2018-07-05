@@ -1,11 +1,12 @@
 'use strict';
-$('#btn').click(function() {
+$('#input').click(function() {
     var temp=$('#temperature').val();
     var hum=$('#humidity').val();
-    $.post('/rest/insert?temperature='+temp+'&humidity'+hum,{
+    $.post('/rest/insert?temperature='+temp+'&humidity='+hum,{
         temp: temp,
-        humid: hum
+        hum: hum
     },function() {
-        alert("temperature: "+temp+", humiditiy: "+hum);
+        console.log("temperature: "+temp+", humidity: "+hum+"(log)");
+        alert("temperature: "+temp+", humiditiy: "+hum+"(alert)");
     });
 });

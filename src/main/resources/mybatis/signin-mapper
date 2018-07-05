@@ -6,4 +6,7 @@
     <select id="getPassword" resultType="ac.dankook.dht2.data.SignIn">
       SELECT user_password FROM USERDATA where user_id=#{id};
     </select>
+    <insert id="insertData">
+        7INSERT INTO INPUTDATA(input_data_no,user_id,temperature,humidity,create_date,update_date) VALUES (2,"chong",#{temperature},#{humidity},Now(),Now());
+    </insert>
 </mapper>

@@ -1,5 +1,6 @@
 package ac.dankook.dht2.service;
 
+import ac.dankook.dht2.data.Data;
 import ac.dankook.dht2.data.SignIn;
 import ac.dankook.dht2.repository.SignInRepository;
 import org.slf4j.Logger;
@@ -18,4 +19,5 @@ public class SignInServiceImpl implements SignInService {
         LOGGER.debug("test");
         return sign;
     }
+
 }

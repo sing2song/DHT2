@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SignInRestController {
-    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(SignInController.class);
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(SignInRestController.class);
     @Autowired
     private SignInService  signInService;
 

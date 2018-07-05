@@ -4,6 +4,7 @@ $('#btn').click(function() {
     var password=$('#password').val();
     $.get('/rest/get?id='+id+'&password='+password, function(result) {
         var $password=result.password;
+        console.log("id: "+id+", password: "+password);
         alert("id: "+id+", password: "+$password);
     });
 });

@@ -7,13 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class SignInRepositoryImpl implements SignInRepository {
+public class DataRepositoryImpl implements DataRepository{
     @Autowired
-    public SqlSession sqlSession;
+    private SqlSession sqlSession;
 
-    public SignIn SignIn(String id) {
-        System.out.println("SignIn");
-        return sqlSession.selectOne("signinMapper.getPassword", id);
+    public SignIn insertData(Data data) {
+        System.out.println("insertData");
+        return sqlSession.selectOne("signinMapper.insertData",data);
     }
-
 }
