@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class SignInRepositoryImpl implements SignInRepository {
+public class UserRepositoryImpl implements UserRepository {
     @Autowired
     public SqlSession sqlSession;
 
