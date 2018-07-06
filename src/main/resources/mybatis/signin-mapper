@@ -2,11 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="signinMapper" >
+<mapper namespace="signInMapper" >
     <select id="getPassword" resultType="ac.dankook.dht2.data.SignIn">
-      SELECT user_password FROM USERDATA where user_id=#{id};
+      SELECT user_password
+      FROM USERDATA
+      where user_id=#{id};
     </select>
     <insert id="insertData">
-        7INSERT INTO INPUTDATA(input_data_no,user_id,temperature,humidity,create_date,update_date) VALUES (2,"chong",#{temperature},#{humidity},Now(),Now());
+        INSERT INTO INPUTDATA(input_data_no,user_id,temperature,humidity,create_date,update_date)
+        VALUES (2,"chong",#{temperature},#{humidity},Now(),Now());
     </insert>
 </mapper>

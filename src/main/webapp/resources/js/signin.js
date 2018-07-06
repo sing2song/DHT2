@@ -2,9 +2,10 @@
 $('#btn').click(function() {
     var id = $('#id').val();
     var password=$('#password').val();
+
+    console.log("id: "+id+", password: "+password);
+
     $.get('/rest/get?id='+id+'&password='+password, function(result) {
-        var $password=result.password;
-        console.log("id: "+id+", password: "+password);
-        alert("id: "+id+", password: "+$password);
+        alert("password: "+result.user_password);
     });
 });

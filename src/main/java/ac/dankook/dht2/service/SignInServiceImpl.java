@@ -15,7 +15,7 @@ public class SignInServiceImpl implements SignInService {
     private SignInRepository signInRep;
 
     public SignIn getPost(String id) {
-        SignIn sign=signInRep.SignIn(id);
+        SignIn sign=signInRep.signIn(id);
         LOGGER.debug("test");
         return sign;
     }

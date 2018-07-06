@@ -13,6 +13,6 @@ public class DataRepositoryImpl implements DataRepository{
 
     public SignIn insertData(Data data) {
         System.out.println("insertData");
-        return sqlSession.selectOne("signinMapper.insertData",data);
+        return sqlSession.selectOne("signInMapper.insertData",data);
     }
 }
