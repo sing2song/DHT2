@@ -16,9 +16,16 @@ public class SignInRestController {
     private UserService userService;
 
     @RequestMapping(value = "/rest/get", method = RequestMethod.GET)
-    public SignIn signIn(@RequestParam String id) {
+    public String signIn(@RequestParam String id,@RequestParam String password) {
         LOGGER.debug("Controller");
-        SignIn sign= userService.getPost(id);
-        return sign;
+        SignIn signIn =  new SignIn();
+        signIn.setUser_id(id);
+        signIn.setUser_password(password);
+        String result=userService.checkPassword(signIn);
+        if(result.equals("success"))
+            return "input";
+        else
+            return "signIn";
+//        SignIn sign= userService.getPost(id);
     }
 }

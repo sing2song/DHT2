@@ -18,5 +18,14 @@ public class UserServiceImpl implements UserService {
         LOGGER.debug("test");
         return sign;
     }
+    public String checkPassword(SignIn signIn) {
+        if(signIn.getUser_password()==getPost(signIn.getUser_id()).getUser_password()) {
+            System.out.println(signIn.getUser_password());
+            System.out.println(getPost(signIn.getUser_id()).getUser_password());
+            return "success";
+        }
+        else
+            return "false";
+    }
 
 }
