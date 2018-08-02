@@ -40,8 +40,12 @@
 
             <div class="form-group">
                 <label for="airconditional" class="col-md-3 control-label"><strong>Airconditional</strong></label>
+                <%--<div class="data_view" name="airconditional">--%>
+                    <%--123141241324--%>
+                <%--</div>--%>
                 <div class="data_view" name="airconditional">
-                    123141241324
+                    <button class="device_button">ON</button>
+                    <button class="device_button">OFF</button>
                 </div>
             </div>
 
