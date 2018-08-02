@@ -1,6 +1,6 @@
 package ac.dankook.dht2.controller;
 
-import ac.dankook.dht2.data.SignIn;
+import ac.dankook.dht2.data.User;
 import ac.dankook.dht2.service.UserService;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,14 @@ public class SignInRestController {
     @RequestMapping(value = "/rest/get", method = RequestMethod.GET)
     public String signIn(@RequestParam String id,@RequestParam String password) {
         LOGGER.debug("Controller");
-        SignIn signIn =  new SignIn();
-        signIn.setUser_id(id);
-        signIn.setUser_password(password);
-        String result=userService.checkPassword(signIn);
+        User user =  new User();
+        user.setUser_id(id);
+        user.setUser_password(password);
+        String result=userService.checkPassword(user);
         if(result.equals("success"))
             return "input";
         else
-            return "signIn";
-//        SignIn sign= userService.getPost(id);
+            return "user";
+//        User sign= userService.getPost(id);
     }
 }

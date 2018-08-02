@@ -1,6 +1,6 @@
 package ac.dankook.dht2.data;
 
-public class SignIn {
+public class User {
     String user_id;
     String user_password;
 

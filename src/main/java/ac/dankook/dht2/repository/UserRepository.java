@@ -1,9 +1,9 @@
 package ac.dankook.dht2.repository;
 
 
-import ac.dankook.dht2.data.SignIn;
+import ac.dankook.dht2.data.User;
 
 
 public interface UserRepository {
-    SignIn signIn(String id);
+    User getPassword(String id);
 }

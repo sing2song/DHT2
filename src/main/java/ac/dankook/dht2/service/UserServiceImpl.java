@@ -1,6 +1,6 @@
 package ac.dankook.dht2.service;
 
-import ac.dankook.dht2.data.SignIn;
+import ac.dankook.dht2.data.User;
 import ac.dankook.dht2.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,15 +13,15 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public SignIn getPost(String id) {
-        SignIn sign= userRepository.signIn(id);
+    public User getPost(String id) {
+        User sign= userRepository.getPassword(id);
         LOGGER.debug("test");
         return sign;
     }
-    public String checkPassword(SignIn signIn) {
-        if(signIn.getUser_password()==getPost(signIn.getUser_id()).getUser_password()) {
-            System.out.println(signIn.getUser_password());
-            System.out.println(getPost(signIn.getUser_id()).getUser_password());
+    public String checkPassword(User user) {
+        if(user.getUser_password()==getPost(user.getUser_id()).getUser_password()) {
+            System.out.println(user.getUser_password());
+            System.out.println(getPost(user.getUser_id()).getUser_password());
             return "success";
         }
         else

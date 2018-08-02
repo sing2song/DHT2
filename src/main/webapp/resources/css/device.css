@@ -1,8 +1,12 @@
 .device_button {
     opacity: 1;
-    border: 0;
+    border: none;
     outline: 0;
+    background-color: white;
+    color:dodgerblue;
+    display: inline-block;
 }
 .device_button:hover {
-    background-color: darkslateblue;
+    color: darkslateblue;
 }
+
