@@ -9,7 +9,7 @@
       where user_id=#{id};
     </select>
     <insert id="insertData">
-      INSERT INTO INPUTDATA(input_date_no,user_id,order_no,temperature,humidity,create_date,update_date)
-      VALUES (15,"ssong",1,#{temperature},#{humidity},Now(),Now());;
+      INSERT INTO INPUTDATA(user_id,order_no,temperature,humidity,create_date,update_date)
+      VALUES ("ssong",1,#{temperature},#{humidity},Now(),Now());
     </insert>
 </mapper>

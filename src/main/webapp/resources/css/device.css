@@ -1,5 +1,13 @@
-
-.device_btn1, .device_btn2 {
+/*.device_btn1:hover {*/
+    /*color: darkslateblue;*/
+/*}*/
+/*.device_btn2 {*/
+    /*color:palevioletred;*/
+/*}*/
+/*.device_btn2:hover {*/
+    /*color:mediumvioletred;*/
+/*}*/
+#air_btn_on, #heat_btn_on, #humid_btn_on, #dehumid_btn_on {
     opacity: 1;
     border: none;
     outline: 0;
@@ -7,29 +15,27 @@
     color:dodgerblue;
     display: inline-block;
 }
-
-.device_btn1:hover {
-    color: darkslateblue;
-}
-.device_btn2 {
-    color:palevioletred;
-}
-.device_btn2:hover {
-    color:mediumvioletred;
-}
-.air_btn_on {
+#air_btn_on:hover, #heat_btn_on:hover, #humid_btn_on:hover, #dehumid_btn_on:hover {
     opacity: 1;
     border: none;
     outline: 0;
     background-color: white;
-    color: blueviolet;
+    color:darkslateblue;
     display: inline-block;
 }
-.air_btn_off {
+#air_btn_off, #heat_btn_off, #humid_btn_off, #dehumid_btn_off{
     opacity: 1;
     border: none;
     outline: 0;
     background-color: white;
-    color:violet;
+    color:palevioletred;
+    display: inline-block;
+}
+#air_btn_off:hover, #heat_btn_off:hover, #humid_btn_off:hover, #dehumid_btn_off:hover {
+    opacity: 1;
+    border: none;
+    outline: 0;
+    background-color: white;
+    color:mediumvioletred;
     display: inline-block;
 }

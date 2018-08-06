@@ -15,17 +15,20 @@ public class SignInRestController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/rest/get", method = RequestMethod.GET)
-    public String signIn(@RequestParam String id,@RequestParam String password) {
+    @RequestMapping(value = "/rest/get", method = RequestMethod.POST)
+    public String signIn(@RequestParam String user_id,@RequestParam String user_password) {
         LOGGER.debug("Controller");
         User user =  new User();
-        user.setUser_id(id);
-        user.setUser_password(password);
-        String result=userService.checkPassword(user);
-        if(result.equals("success"))
-            return "input";
-        else
-            return "user";
-//        User sign= userService.getPost(id);
+        user.setUser_id(user_id);
+        user.setUser_password(user_password);
+        Boolean result=userService.checkPassword(user);
+        if(result) {
+            LOGGER.debug("Success");
+            return "success";
+        }
+        else {
+            LOGGER.debug("failed");
+            return "fail";
+        }
     }
 }

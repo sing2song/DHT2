@@ -39,23 +39,17 @@
 
             <div class="form-group">
                 <label for="date" class="col-md-3 control-label"><strong>Date</strong></label>
-                <div class="data_view" name="date">
-                    123141241324
-                </div>
+                <div class="data_view" id="date" name="date"></div>
             </div>
 
             <div class="form-group">
                 <label for="temperature" class="col-md-3 control-label"><strong>Temperature</strong></label>
-                <div class="data_view" name="humidity">
-                    123141241324
-                </div>
+                <div class="data_view" id="average_temperature" name="humidity"></div>
             </div>
 
             <div class="form-group">
                 <label for="humidity" class="col-md-3 control-label"><strong>Humidity</strong></label>
-                <div class="data_view" name="humidity">
-                    123141241324
-                </div>
+                <div class="data_view" id="average_humiditiy" name="humidity"></div>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 package ac.dankook.dht2.service;
 
 import ac.dankook.dht2.data.Data;
+import ac.dankook.dht2.data.Device;
 import ac.dankook.dht2.repository.DataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,8 +20,8 @@ public class DataServiceImpl implements DataService{
         dataRepository.insertData(data);
     }
 
-    public void setState(Data data) {
+    public void setState(Device device) {
         LOGGER.debug("insertState");
-        dataRepository.insertData(data);
+        dataRepository.setState(device);
     }
 }

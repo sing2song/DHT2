@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -15,17 +16,19 @@ public class UserServiceImpl implements UserService {
 
     public User getPost(String id) {
         User sign= userRepository.getPassword(id);
-        LOGGER.debug("test");
         return sign;
     }
-    public String checkPassword(User user) {
-        if(user.getUser_password()==getPost(user.getUser_id()).getUser_password()) {
-            System.out.println(user.getUser_password());
-            System.out.println(getPost(user.getUser_id()).getUser_password());
-            return "success";
+    public Boolean checkPassword(User user) {
+        String password = user.getUser_password();
+        String selectedPassword = this.getPost(user.getUser_id()).getUser_password();
+
+        if(password.equals(selectedPassword)) {
+            System.out.println(password);
+            System.out.println(selectedPassword);
+            return true;
         }
         else
-            return "false";
+            return false;
     }
 
 }

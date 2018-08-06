@@ -18,25 +18,6 @@
     <link href="/resources/css/simple-sidebar.css" rel="stylesheet">
     <link href="/resources/css/average.css" rel="stylesheet">
     <link href="/resources/css/device.css" rel="stylesheet">
-    <%--<style type="text/css">--%>
-        <%--#air_btn_on {--%>
-            <%--opacity: 1;--%>
-            <%--border: none;--%>
-            <%--outline: 0;--%>
-            <%--background-color: white;--%>
-            <%--color:dodgerblue;--%>
-            <%--display: inline-block;--%>
-        <%--}--%>
-        <%--#air_btn_off {--%>
-            <%--opacity: 1;--%>
-            <%--border: none;--%>
-
-            <%--outline: 0;--%>
-            <%--background-color: white;--%>
-            <%--color:palevioletred;--%>
-            <%--display: inline-block;--%>
-        <%--}--%>
-    <%--</style>--%>
 </head>
 
 <body>
@@ -60,32 +41,32 @@
             <div class="form-group">
                 <label for="airconditional" class="col-md-3 control-label"><strong>Airconditional</strong></label>
                 <div class="data_view" name="airconditional">
-                    <button class="air_btn_on">ON</button>
-                    <button class="air_btn_off">OFF</button>
+                    <button id="air_btn_on">ON</button>
+                    <button id="air_btn_off">OFF</button>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="heater" class="col-md-3 control-label"><strong>Heater</strong></label>
                 <div class="data_view" name="airconditional">
-                    <button class="device_btn1">ON</button>
-                    <button class="device_btn2">OFF</button>
+                    <button id="heat_btn_on">ON</button>
+                    <button id="heat_btn_off">OFF</button>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="humidifier" class="col-md-3 control-label"><strong>Humidifier</strong></label>
                 <div class="data_view" name="airconditional">
-                    <button class="device_btn1">ON</button>
-                    <button class="device_btn2">OFF</button>
+                    <button id="humid_btn_on">ON</button>
+                    <button id="humid_btn_off">OFF</button>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="dehumidifier" class="col-md-3 control-label"><strong>Dehumidifier</strong></label>
                 <div class="data_view" name="airconditional">
-                    <button class="device_btn1">ON</button>
-                    <button class="device_btn2">OFF</button>
+                    <button id="dehumid_btn_on">ON</button>
+                    <button id="dehumid_btn_off">OFF</button>
                 </div>
             </div>
         </div>

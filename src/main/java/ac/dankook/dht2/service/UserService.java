@@ -4,5 +4,5 @@ import ac.dankook.dht2.data.User;
 
 public interface UserService {
     User getPost(String id);
-    String checkPassword(User user);
+    Boolean checkPassword(User user);
 }

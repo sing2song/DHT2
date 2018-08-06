@@ -5,7 +5,14 @@ $('#btn').click(function() {
 
     console.log("id: "+id+", password: "+password);
 
-    $.get('/rest/get?id='+id+'&password='+password, function(result) {
-        alert("password: "+result.user_password);
+    $.post('/rest/get',{
+      user_id: id,
+      user_password: password
+    }, function(result) {
+        if (result === "success") {
+            location.href = "/input";
+        } else {
+            alert("로그인 실패!");
+        }
     });
 });

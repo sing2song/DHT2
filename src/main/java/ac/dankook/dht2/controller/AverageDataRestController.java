@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class InputDataRestController {
-    static final Logger LOGGER= LoggerFactory.getLogger(InputDataRestController.class);
+public class AverageDataRestController {
+    static final Logger LOGGER = LoggerFactory.getLogger(AverageDataRestController.class);
+
     @Autowired
     private DataService dataService;
 
-    @RequestMapping(value="/rest/insert", method= RequestMethod.GET )
-    public void InputData(@RequestParam short temperature, @RequestParam short humidity) {
-        LOGGER.debug("InputDataRestController");
-        Data data = new Data();
-        data.setTemperature(temperature);
-        data.setHumidity(humidity);
-        dataService.insertData(data);
+    @RequestMapping(value="rest/average", method=RequestMethod.GET)
+    public void AverageData() {
+        LOGGER.debug("AverageDataRestController");
+
+
     }
+
 }

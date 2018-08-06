@@ -1,6 +1,7 @@
 package ac.dankook.dht2.repository;
 
 import ac.dankook.dht2.data.Data;
+import ac.dankook.dht2.data.Device;
 import ac.dankook.dht2.data.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,8 @@ public class DataRepositoryImpl implements DataRepository{
         return sqlSession.selectOne("signInMapper.insertData",data);
     }
 
-    public User setState(Data data) {
+    public User setState(Device device) {
         System.out.println("setState");
-        return sqlSession.selectOne("dataMapper.insertDeviceData",data);
+        return sqlSession.selectOne("dataMapper.insertDeviceData",device);
     }
 }

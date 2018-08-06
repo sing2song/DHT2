@@ -4,14 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dataMapper" >
     <update id="updateAverageData">
-      UPDATE averagedata,inputdata
-      SET averagedata.average_temperature = inputdata.temperature, averagedata.average_humidity=inputdata.humidity
-      WHERE averagedata.user_id=inputdata.user_id;
+      UPDATE averagedata SET average_temperature=#{average_temperature}, average_humidity=#{average_humidity} WHERE user_id='ssong'
 
     </update>
-    <insert id="insertDeviceData">
-        INSERT INTO DEVICE(device_data_no,user_id,airconditional,heater,humidifier,dehumidifier,create_date,update_date)
-        VALUES ('ssong',#{aircon},#{heater},#{humid},#{dehumid},NOW(),NOW());
+    <insert id="insertDeviceData" >
+        INSERT INTO DEVICE(user_id,airconditional,heater,humidifier,dehumidifier,create_date,update_date)
+        VALUES ('ssong',#{airconditional},#{heater},#{humidifier},#{dehumidifier},NOW(),NOW());
     </insert>
 
 </mapper>
