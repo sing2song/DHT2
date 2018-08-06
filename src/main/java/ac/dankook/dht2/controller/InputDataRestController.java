@@ -17,11 +17,11 @@ public class InputDataRestController {
     private DataService dataService;
 
     @RequestMapping(value="/rest/insert", method= RequestMethod.POST )
-    public void InputData(@RequestParam Integer temp, @RequestParam Integer hum) {
+    public void InputData(@RequestParam short temperature, @RequestParam short humidity) {
         LOGGER.debug("InputDataRestController");
         Data data = new Data();
-        data.setTemp(temp);
-        data.setHum(hum);
+        data.setTemperature(temperature);
+        data.setHumidity(humidity);
         dataService.insertData(data);
     }
 }

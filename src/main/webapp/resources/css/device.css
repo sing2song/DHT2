@@ -1,4 +1,5 @@
-.device_button {
+
+.device_btn1, .device_btn2 {
     opacity: 1;
     border: none;
     outline: 0;
@@ -6,7 +7,29 @@
     color:dodgerblue;
     display: inline-block;
 }
-.device_button:hover {
+
+.device_btn1:hover {
     color: darkslateblue;
 }
-
+.device_btn2 {
+    color:palevioletred;
+}
+.device_btn2:hover {
+    color:mediumvioletred;
+}
+.air_btn_on {
+    opacity: 1;
+    border: none;
+    outline: 0;
+    background-color: white;
+    color: blueviolet;
+    display: inline-block;
+}
+.air_btn_off {
+    opacity: 1;
+    border: none;
+    outline: 0;
+    background-color: white;
+    color:violet;
+    display: inline-block;
+}

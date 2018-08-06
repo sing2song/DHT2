@@ -1,12 +1,12 @@
 'use strict';
 $('#input').click(function() {
-    var temp=$('#temperature').val();
-    var hum=$('#humidity').val();
-    $.post('/rest/insert?temperature='+temp+'&humidity='+hum,{
-        temp: temp,
-        hum: hum
+    var temperature=$('#temperature').val();
+    var humidity=$('#humidity').val();
+    $.post('/rest/insert?temperature='+temperature+'&humidity='+humidity,{
+        temperature: temperature,
+        humidity: humidity
     },function() {
-        console.log("temperature: "+temp+", humidity: "+hum+"(log)");
-        alert("temperature: "+temp+", humiditiy: "+hum+"(alert)");
+        console.log("temperature: "+temperature+", humidity: "+humidity+"(log)");
+        alert("temperature: "+temperature+", humidity: "+humidity+"(alert)");
     });
 });

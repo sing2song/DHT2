@@ -15,4 +15,9 @@ public class DataRepositoryImpl implements DataRepository{
         System.out.println("insertData");
         return sqlSession.selectOne("signInMapper.insertData",data);
     }
+
+    public User setState(Data data) {
+        System.out.println("setState");
+        return sqlSession.selectOne("dataMapper.insertDeviceData",data);
+    }
 }

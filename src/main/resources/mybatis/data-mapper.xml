@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dataMapper" >
+    <update id="updateAverageData">
+      UPDATE averagedata,inputdata
+      SET averagedata.average_temperature = inputdata.temperature, averagedata.average_humidity=inputdata.humidity
+      WHERE averagedata.user_id=inputdata.user_id;
+
+    </update>
+    <insert id="insertDeviceData">
+        INSERT INTO DEVICE(device_data_no,user_id,airconditional,heater,humidifier,dehumidifier,create_date,update_date)
+        VALUES ('ssong',#{aircon},#{heater},#{humid},#{dehumid},NOW(),NOW());
+    </insert>
+
+</mapper>

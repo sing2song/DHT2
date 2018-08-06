@@ -12,10 +12,15 @@ public class DataServiceImpl implements DataService{
     private static final Logger LOGGER = LoggerFactory.getLogger(DataServiceImpl.class);
 
     @Autowired
-    private DataRepository dataRep;
+    private DataRepository dataRepository;
 
     public void insertData(Data data) {
-        LOGGER.debug("dataService");
-        dataRep.insertData(data);
+        LOGGER.debug("insertData");
+        dataRepository.insertData(data);
+    }
+
+    public void setState(Data data) {
+        LOGGER.debug("insertState");
+        dataRepository.insertData(data);
     }
 }

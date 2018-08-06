@@ -1,23 +1,59 @@
 package ac.dankook.dht2.data;
 
 public class Data {
-    public double getHum() {
-        return hum;
+    private short temperature;
+    private short humidity;
+    private int airconditional;
+
+    public short getTemperature() {
+        return temperature;
     }
 
-    public void setHum(Integer hum) {
-        this.hum = hum;
+    public void setTemperature(short temperature) {
+        this.temperature = temperature;
     }
 
-    public double getTemp() {
-        return temp;
+    public short getHumidity() {
+        return humidity;
     }
 
-    public void setTemp(Integer temp) {
-        this.temp = temp;
+    public void setHumidity(short humidity) {
+        this.humidity = humidity;
     }
 
-    private Integer temp;
-    private Integer hum;
+    public int getAirconditional() {
+        return airconditional;
+    }
 
+    public void setAirconditional(int airconditional) {
+        this.airconditional = airconditional;
+    }
+
+    public int getHeater() {
+        return heater;
+    }
+
+    public void setHeater(int heater) {
+        this.heater = heater;
+    }
+
+    public int getHumidifier() {
+        return humidifier;
+    }
+
+    public void setHumidifier(int humidifier) {
+        this.humidifier = humidifier;
+    }
+
+    public int getDehumidifer() {
+        return dehumidifer;
+    }
+
+    public void setDehumidifer(int dehumidifer) {
+        this.dehumidifer = dehumidifer;
+    }
+
+    private int heater;
+    private int humidifier;
+    private int dehumidifer;
 }

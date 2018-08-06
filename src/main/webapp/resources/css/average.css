@@ -1,5 +1,6 @@
 .data_view {
-    padding: 0px;
+    padding: 10px;
     border: 4px solid dodgerblue;
     border-radius: 4px;
+    width: fit-content;
 }
