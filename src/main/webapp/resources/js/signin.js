@@ -9,10 +9,13 @@ $('#btn').click(function() {
       user_id: id,
       user_password: password
     }, function(result) {
-        if (result === "success") {
-            location.href = "/input";
-        } else {
+        if (result === "fail") {
             alert("로그인 실패!");
+        } else {
+            alert("성공");
+
+            console.log("user_id:"+result);
+            location.href = "/input";
         }
     });
 });

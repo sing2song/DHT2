@@ -24,7 +24,7 @@ public class SignInRestController {
         Boolean result=userService.checkPassword(user);
         if(result) {
             LOGGER.debug("Success");
-            return "success";
+            return user_id;
         }
         else {
             LOGGER.debug("failed");

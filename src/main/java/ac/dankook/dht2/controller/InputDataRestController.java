@@ -17,7 +17,8 @@ public class InputDataRestController {
     private DataService dataService;
 
     @RequestMapping(value="/rest/insert", method= RequestMethod.GET )
-    public void InputData(@RequestParam short temperature, @RequestParam short humidity) {
+    public void InputData(@RequestParam String user_id,@RequestParam short temperature, @RequestParam short humidity) {
+
         LOGGER.debug("InputDataRestController");
         Data data = new Data();
         data.setTemperature(temperature);

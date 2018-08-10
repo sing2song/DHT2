@@ -10,6 +10,6 @@
     </select>
     <insert id="insertData">
       INSERT INTO INPUTDATA(user_id,order_no,temperature,humidity,create_date,update_date)
-      VALUES ("ssong",1,#{temperature},#{humidity},Now(),Now());
+      VALUES (#{user_id},1,#{temperature},#{humidity},Now(),Now());
     </insert>
 </mapper>
