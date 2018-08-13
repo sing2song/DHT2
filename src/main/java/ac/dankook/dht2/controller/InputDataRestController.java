@@ -1,6 +1,7 @@
 package ac.dankook.dht2.controller;
 
 import ac.dankook.dht2.data.Data;
+import ac.dankook.dht2.data.User;
 import ac.dankook.dht2.service.DataService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +19,9 @@ public class InputDataRestController {
 
     @RequestMapping(value="/rest/insert", method= RequestMethod.GET )
     public void InputData(@RequestParam String user_id,@RequestParam short temperature, @RequestParam short humidity) {
-
         LOGGER.debug("InputDataRestController");
         Data data = new Data();
+        data.setUser_id(user_id);
         data.setTemperature(temperature);
         data.setHumidity(humidity);
         dataService.insertData(data);

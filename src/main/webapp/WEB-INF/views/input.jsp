@@ -1,3 +1,8 @@
+<%@ page import="org.jsoup.nodes.Document" %>
+<%@ page import="org.jsoup.Jsoup" %>
+<%@ page import="java.io.File" %>
+<%@ page import="org.jsoup.nodes.Element" %>
+<%@ page import="org.jsoup.select.Elements" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
@@ -19,11 +24,8 @@
 </head>
 
 <body>
-
     <div id="wrapper">
-
         <%@ include file="/WEB-INF/views/include/dht_sidebar.jsp" %>
-
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
