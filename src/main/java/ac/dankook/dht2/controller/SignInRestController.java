@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 @RestController
 public class SignInRestController {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(SignInRestController.class);
@@ -16,17 +19,16 @@ public class SignInRestController {
     private UserService userService;
 
     @RequestMapping(value = "/rest/get", method = RequestMethod.POST)
-    public String signIn(@RequestParam String user_id,@RequestParam String user_password) {
+    public String signIn(@RequestParam String user_id, @RequestParam String user_password, HttpServletResponse response) {
         LOGGER.debug("Controller");
-        User user =  new User();
+        User user = new User();
         user.setUser_id(user_id);
         user.setUser_password(user_password);
-        Boolean result=userService.checkPassword(user);
-        if(result) {
+        Boolean result = userService.checkPassword(user);
+        if (result) {
             LOGGER.debug("Success");
             return user_id;
-        }
-        else {
+        } else {
             LOGGER.debug("failed");
             return "fail";
         }

@@ -9,24 +9,38 @@ $('#btn').click(function() {
     var id = $('#id').val();
     var password=$('#password').val();
     console.log("id: "+id+", password: "+password);
-    $.post('/rest/get',{
-      user_id: id,
-      user_password: password
+    $.post('/signin',{
+        user_id: id,
+        user_password: password
     }, function(result) {
-        if (result === "fail") {
-            alert("로그인 실패!");
-        } else {
-            setCookie('user_id',id,1);
-            result;
-            // location.href = "/input";
-        }
+        console.dir(result);
+        // if (result === "fail") {
+        //     alert("로그인 실패!");
+        // } else {
+        //     // setCookie('user_id',id,1);
+        //     console.dir(result);
+        //     location.href = "/input";
+        // }
     });
+
+    // $.post('/rest/get',{
+    //   user_id: id,
+    //   user_password: password
+    // }, function(result) {
+    //     if (result === "fail") {
+    //         alert("로그인 실패!");
+    //     } else {
+    //         // setCookie('user_id',id,1);
+    //         console.dir(result);
+    //         location.href = "/input";
+    //     }
+    // });
 });
-var setCookie = function(name,value,exp) {
-    var date = new Date();
-    date.setTime(date.getTime()+exp*60*60);
-    document.cookie = value;
-}
+// var setCookie = function(name,value,exp) {
+//     var date = new Date();
+//     date.setTime(date.getTime()+exp*60*60);
+//     document.cookie = value;
+// }
 // var setCookie = fucntion(name, value, exp) {
 //     var date = new Date();
 //     date.setTime(date.getDate()+exp);

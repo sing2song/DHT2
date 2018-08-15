@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class AverageDataRestController {
     static final Logger LOGGER = LoggerFactory.getLogger(AverageDataRestController.class);
@@ -18,10 +20,9 @@ public class AverageDataRestController {
     private DataService dataService;
 
     @RequestMapping(value="rest/average", method=RequestMethod.GET)
-    public void AverageData() {
+    public void AverageData(@RequestParam String user_id) {
         LOGGER.debug("AverageDataRestController");
-
-
     }
+
 
 }
