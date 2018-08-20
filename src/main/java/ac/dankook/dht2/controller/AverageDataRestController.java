@@ -1,6 +1,5 @@
 package ac.dankook.dht2.controller;
 
-import ac.dankook.dht2.data.Data;
 import ac.dankook.dht2.service.DataService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 public class AverageDataRestController {
