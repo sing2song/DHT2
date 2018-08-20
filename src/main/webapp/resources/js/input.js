@@ -18,7 +18,7 @@ $('#input').click(function() {
 });
 var getCookie = function(name) {
     var cookie = document.cookie;
-    var arr = cookie.split(' ');
+    var arr = cookie.split('=');
     for(var i=0; i<arr.length; i++) {
         user_id=arr[arr.length-1]
         console.log(user_id);
