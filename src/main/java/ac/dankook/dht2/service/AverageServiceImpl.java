@@ -9,17 +9,23 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class AverageServiceImpl implements AverageService{
+public class AverageServiceImpl implements AverageService {
     @Autowired
     private AverageRepository averageRepository;
 
     public List<String> getTemperature(Data data) {
         return averageRepository.getTemperature(data);
     }
+
     public List<String> getHumidity(Data data) {
         return averageRepository.getHumidity(data);
     }
+
     public void setAverageData(AverageData averageData) {
         averageRepository.insertAverageData(averageData);
+    }
+
+    public AverageData getAverageData(AverageData averageData) {
+        return averageRepository.getAverageData(averageData);
     }
 }

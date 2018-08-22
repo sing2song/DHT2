@@ -21,7 +21,7 @@ public class InputDataRestController {
     @Autowired private DataService dataService;
     @Autowired private AverageService averageService;
 
-    @RequestMapping(value="/rest/insert", method= RequestMethod.GET )
+    @RequestMapping(value="/rest/insert", method= RequestMethod.POST)
     public void InputData(@RequestParam String user_id,@RequestParam short temperature, @RequestParam short humidity) {
         LOGGER.debug("InputDataRestController");
         Data data = new Data();

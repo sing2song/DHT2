@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <script src="/resources/js/average.js"></script>
+
     <title>DHT</title>
 
     <!-- Bootstrap core CSS -->
@@ -58,6 +60,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/average.js"></script>
 
 </body>
 

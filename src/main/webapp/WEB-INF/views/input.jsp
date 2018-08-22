@@ -1,9 +1,3 @@
-<%@ page import="org.jsoup.nodes.Document" %>
-<%@ page import="org.jsoup.Jsoup" %>
-<%@ page import="java.io.File" %>
-<%@ page import="org.jsoup.nodes.Element" %>
-<%@ page import="org.jsoup.select.Elements" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
 <head>

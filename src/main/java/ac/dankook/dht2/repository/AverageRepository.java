@@ -9,5 +9,6 @@ public interface AverageRepository {
     List<String> getTemperature(Data data);
     List<String> getHumidity(Data data);
     void insertAverageData(AverageData averageData);
+    AverageData getAverageData(AverageData averageData);
 
 }

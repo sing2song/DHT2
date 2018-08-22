@@ -9,4 +9,5 @@ public interface AverageService {
     List<String> getTemperature(Data data);
     List<String> getHumidity(Data data);
     void setAverageData(AverageData averageData);
+    AverageData getAverageData(AverageData averageData);
 }
