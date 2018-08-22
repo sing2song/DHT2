@@ -17,6 +17,16 @@ public class AverageData {
         this.average_humidity = average_humidity;
     }
 
+    public String user_id;
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+
     public int average_temperature;
     public int average_humidity;
 

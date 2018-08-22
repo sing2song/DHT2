@@ -3,24 +3,33 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dataMapper" >
-    <select id = "getTemperature" resultType="java.lang.String">
+    <select id = "getTemperature" resultType="String">
       SELECT temperature
       FROM INPUTDATA
-      WHERE user_id=#{user_id};
-      ORDER BY input_data_no DESC LIMIT 5;
+      WHERE user_id=#{user_id}
+      ORDER BY input_data_no
+      DESC LIMIT 5;
     </select>
-    <select id = "getHumidity" resultType="ac.dankook.dht2.data.Data">
+    <select id = "getHumidity" resultType="String">
         SELECT humidity
         FROM INPUTDATA
-        WHERE user_id=#{user_id};
-        ORDER BY input_data_no DESC LIMIT 5;
+        WHERE user_id=#{user_id}
+        ORDER BY input_data_no
+        DESC LIMIT 5;
     </select>
-    <update id="updateAverageData">
-      UPDATE averagedata SET average_temperature=#{average_temperature}, average_humidity=#{average_humidity} WHERE user_id=#{user_id};
-p;    </update>
+    <insert id="insertAverageData">
+        INSERT INTO AVERAGEDATA(user_id, average_temperature, average_humidity, create_date, update_date)
+        VALUES(#{user_id},#{average_temperature},#{average_humidity},NOW(),NOW());
+    </insert>
+    <select id = "getAverageData" resultType="ac.dankook.dht2.data.AverageData">
+        SELECT average_temperature,average_humidity
+        FROM AVERGEDATA
+        WHERE user_id=#{user_id}
+        ORDER BY input_data_no
+        DESC LIMIT 1;
+    </select>
     <insert id="insertDeviceData" >
         INSERT INTO DEVICE(user_id,airconditional,heater,humidifier,dehumidifier,create_date,update_date)
-        VALUES ('ssong',#{airconditional},#{heater},#{humidifier},#{dehumidifier},NOW(),NOW());
+        VALUES (#{user_id},#{airconditional},#{heater},#{humidifier},#{dehumidifier},NOW(),NOW());
     </insert>
-
 </mapper>

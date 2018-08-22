@@ -1,5 +1,15 @@
 'use strict';
 $(document).ready(function () {
+    var date;
+    var temp;
+    var humid;
+    $.post('/rest/average', {
+        user_id: id,
+        average_temperature: temp,
+        average_humidity: humid
+    },function(result) {
+        console.log(result);
+    });
     // $.ajax({
     //     url: "average.jsp",
     //     cashe: false,

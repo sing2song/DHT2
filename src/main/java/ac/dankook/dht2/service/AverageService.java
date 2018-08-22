@@ -1,8 +1,12 @@
 package ac.dankook.dht2.service;
 
+import ac.dankook.dht2.data.AverageData;
 import ac.dankook.dht2.data.Data;
 
+import java.util.List;
+
 public interface AverageService {
-    void getTemperature(Data data);
-    void getHumidity(Data data);
+    List<String> getTemperature(Data data);
+    List<String> getHumidity(Data data);
+    void setAverageData(AverageData averageData);
 }
