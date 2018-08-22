@@ -29,19 +29,7 @@ public class InputDataRestController {
         data.setTemperature(temperature);
         data.setHumidity(humidity);
         AverageData averageData = new AverageData();
-        List<String> getTempData = averageService.getTemperature(data);
-        List<String> getHumidData = averageService.getHumidity(data);
-        int tempSum = 0, humidSum = 0;
-        for (int i = 0; i < getTempData.size(); i++) {
-            tempSum += Integer.parseInt(getTempData.get(i));
-            humidSum += Integer.parseInt(getHumidData.get(i));
-        }
-        tempSum /= getTempData.size();
-        humidSum /= getHumidData.size();
-        averageData.setUser_id(user_id);
-        averageData.setAverage_temperature(tempSum);
-        averageData.setAverage_humidity(humidSum);
-        averageService.setAverageData(averageData);
+        averageService.setAverageData(data, averageData);
         dataService.insertData(data);
     }
 }

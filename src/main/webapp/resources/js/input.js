@@ -7,7 +7,6 @@ $(document).ready(function() {
 $('#input').click(function() {
     var temperature=$('#temperature').val();
     var humidity=$('#humidity').val();
-    console.log("user_id:"+user_id+", temperature:"+temperature+", humidity:"+humidity+"(log)");
     $.get('/rest/insert',{
         user_id: user_id,
         temperature: temperature,

@@ -8,5 +8,5 @@ import java.util.List;
 public interface AverageService {
     List<String> getTemperature(Data data);
     List<String> getHumidity(Data data);
-    void setAverageData(AverageData averageData);
+    void setAverageData(Data data,AverageData averageData);
 }
