@@ -19,7 +19,12 @@ public class AverageServiceImpl implements AverageService{
     public List<String> getHumidity(Data data) {
         return averageRepository.getHumidity(data);
     }
-    public void setAverageData(Data data, AverageData averageData) {
+    public void setAverageData(Data data) {
+        AverageData averageData;
+        averageData = this.calculateAverage(data);
+        averageRepository.insertAverageData(averageData);
+    }
+    public AverageData calculateAverage(Data data) {
         List<String> getTempData = this.getTemperature(data);
         List<String> getHumidData = this.getHumidity(data);
         int tempSum = 0, humidSum = 0;
@@ -29,10 +34,11 @@ public class AverageServiceImpl implements AverageService{
         }
         tempSum /= getTempData.size();
         humidSum /= getHumidData.size();
+        AverageData averageData = new AverageData();
         averageData.setUser_id(data.getUser_id());
         averageData.setAverage_temperature(tempSum);
         averageData.setAverage_humidity(humidSum);
-        averageRepository.insertAverageData(averageData);
+        return averageData;
     }
 
     public AverageData getAverageData(String user_id) {
