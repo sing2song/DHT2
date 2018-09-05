@@ -34,4 +34,9 @@ public class AverageServiceImpl implements AverageService{
         averageData.setAverage_humidity(humidSum);
         averageRepository.insertAverageData(averageData);
     }
+
+    public AverageData getAverageData(String user_id) {
+        AverageData averageData = averageRepository.getAverageData(user_id);
+        return averageData;
+    }
 }

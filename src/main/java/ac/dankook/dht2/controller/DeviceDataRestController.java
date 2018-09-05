@@ -21,11 +21,11 @@ public class DeviceDataRestController {
     private DataService dataService;
 
     @RequestMapping(value="/rest/device", method= RequestMethod.POST)
-    public void DeviceData(@RequestParam String user_id, @RequestParam int airconditional, @RequestParam int heater, @RequestParam int humidifier, @RequestParam int dehumidifier, HttpServletResponse response){
+    public void DeviceData(@RequestParam String user_id, @RequestParam int airconditioner, @RequestParam int heater, @RequestParam int humidifier, @RequestParam int dehumidifier, HttpServletResponse response){
         LOGGER.debug("DeviceDataRestController");
         Device device = new Device();
         device.setUser_id(user_id);
-        device.setAirconditional(airconditional);
+        device.setAirconditioner(airconditioner);
         device.setHeater(heater);
         device.setHumidifier(humidifier);
         device.setDehumidifier(dehumidifier);

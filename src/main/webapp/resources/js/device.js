@@ -20,9 +20,9 @@ var dehumid=0;
 
 $('#air_btn_on').click(function() {
     air=1;
-    $.post('/rest/device?airconditional='+1, {
+    $.post('/rest/device?airconditioner='+1, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -34,7 +34,7 @@ $('#heat_btn_on').click(function() {
     heat=1;
     $.post('/rest/device?heater='+1, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -46,7 +46,7 @@ $('#humid_btn_on').click(function() {
     humid=1;
     $.post('/rest/device?humidifier='+1, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -58,7 +58,7 @@ $('#dehumid_btn_on').click(function() {
     dehumid=1;
     $.post('/rest/device?dehumidifier='+1, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -68,9 +68,9 @@ $('#dehumid_btn_on').click(function() {
 });
 $('#air_btn_off').click(function() {
     air=0;
-    $.post('/rest/device?airconditional='+0, {
+    $.post('/rest/device?airconditioner='+0, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -82,7 +82,7 @@ $('#heat_btn_off').click(function() {
     heat=0;
     $.post('/rest/device?heater='+0, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -94,7 +94,7 @@ $('#humid_btn_off').click(function() {
     humid=0;
     $.post('/rest/device?humidifier='+0, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid
@@ -106,7 +106,7 @@ $('#dehumid_btn_off').click(function() {
     dehumid=0;
     $.post('/rest/device?dehumidifier='+0, {
         user_id: user_id,
-        airconditional: air,
+        airconditioner: air,
         heater: heat,
         humidifier: humid,
         dehumidifier: dehumid

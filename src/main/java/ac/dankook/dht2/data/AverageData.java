@@ -1,6 +1,10 @@
 package ac.dankook.dht2.data;
 
 public class AverageData {
+    public String user_id;
+    public int average_temperature;
+    public int average_humidity;
+
     public int getAverage_temperature() {
         return average_temperature;
     }
@@ -17,8 +21,6 @@ public class AverageData {
         this.average_humidity = average_humidity;
     }
 
-    public String user_id;
-
     public String getUser_id() {
         return user_id;
     }
@@ -26,8 +28,5 @@ public class AverageData {
     public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
-
-    public int average_temperature;
-    public int average_humidity;
 
 }

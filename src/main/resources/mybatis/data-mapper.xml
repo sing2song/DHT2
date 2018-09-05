@@ -23,13 +23,13 @@
     </insert>
     <select id = "getAverageData" resultType="ac.dankook.dht2.data.AverageData">
         SELECT average_temperature,average_humidity
-        FROM AVERGEDATA
+        FROM AVERAGEDATA
         WHERE user_id=#{user_id}
-        ORDER BY input_data_no
+        ORDER BY average_data_no
         DESC LIMIT 1;
     </select>
     <insert id="insertDeviceData" >
-        INSERT INTO DEVICE(user_id,airconditional,heater,humidifier,dehumidifier,create_date,update_date)
-        VALUES (#{user_id},#{airconditional},#{heater},#{humidifier},#{dehumidifier},NOW(),NOW());
+        INSERT INTO DEVICE(user_id,airconditioner,heater,humidifier,dehumidifier,create_date,update_date)
+        VALUES (#{user_id},#{airconditioner},#{heater},#{humidifier},#{dehumidifier},NOW(),NOW());
     </insert>
 </mapper>

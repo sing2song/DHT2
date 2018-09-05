@@ -1,40 +1,27 @@
 'use strict';
+var user_id;
+var avgTemp;
+var avgHumid;
 $(document).ready(function () {
-    var date;
-    var temp;
-    var humid;
-    $.post('/rest/average', {
-        user_id: id,
-        average_temperature: temp,
-        average_humidity: humid
-    },function(result) {
+    getCookie("user_id");
+    console.log("average.js");
+    $.post('/rest/average',{
+        user_id: user_id
+    }, function(result) {
         console.log(result);
+        avgTemp=result.average_temperature;
+        avgHumid=result.average_humidity;
+        console.log(avgTemp);
+        console.log(avgHumid);
+        $('#average_temperature').text(avgTemp);
+        $('#average_humidity').text(avgHumid);
     });
-    // $.ajax({
-    //     url: "average.jsp",
-    //     cashe: false,
-    //     success:function(data) {
-    //         console.log("data:"+"\n"+data);
-    //     },
-    //     error: function(a,b,c) {
-    //         console.log(a+", "+b+", "+c);
-    //     }
-    // })
-
-    // var mysql = require('mysql');
-    // var connection = mysql.createConection({
-    //     host: 'root',
-    //     user: 'root',
-    //     password: '32152422',
-    //     database: 'test'
-    // });
-    // connection.connect();
-    //
-    // var sql = 'SELECT average_temperature FROM averagedata';
-    // connection.query(sql, function(err,rows,fields) {
-    //     if(err) console.log(err);
-    //     console.log('rows',rows);
-    //     console.log('fields',fields);
-    // });
 
 });
+var getCookie = function(name) {
+    var cookie = document.cookie;
+    var arr = cookie.split('=');
+    for(var i=0; i<arr.length; i++) {
+        user_id=arr[arr.length-1]
+    }
+}

@@ -1,13 +1,12 @@
 package ac.dankook.dht2.data;
 
 public class Device {
-    public int getAirconditional() {
-        return airconditional;
-    }
 
-    public void setAirconditional(int airconditional) {
-        this.airconditional = airconditional;
-    }
+    private String user_id;
+    private int airconditioner;
+    private int heater;
+    private int humidifier;
+    private int dehumidifier;
 
     public int getHeater() {
         return heater;
@@ -15,7 +14,7 @@ public class Device {
 
     public void setHeater(int heater) {
         this.heater = heater;
-    }   
+    }
 
     public int getHumidifier() {
         return humidifier;
@@ -41,9 +40,12 @@ public class Device {
         this.user_id = user_id;
     }
 
-    private String user_id;
-    private int airconditional;
-    private int heater;
-    private int humidifier;
-    private int dehumidifier;
+    public int getAirconditioner() {
+        return airconditioner;
+    }
+
+    public void setAirconditioner(int airconditioner) {
+        this.airconditioner = airconditioner;
+    }
+
 }

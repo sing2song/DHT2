@@ -20,7 +20,6 @@ var getCookie = function(name) {
     var arr = cookie.split('=');
     for(var i=0; i<arr.length; i++) {
         user_id=arr[arr.length-1]
-        console.log(user_id);
     }
 }
 

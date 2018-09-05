@@ -28,8 +28,7 @@ public class InputDataRestController {
         data.setUser_id(user_id);
         data.setTemperature(temperature);
         data.setHumidity(humidity);
-        AverageData averageData = new AverageData();
-        averageService.setAverageData(data, averageData);
+        averageService.setAverageData(data);
         dataService.insertData(data);
     }
 }

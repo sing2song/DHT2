@@ -16,7 +16,6 @@
     <!-- Custom styles for this template -->
     <link href="/resources/css/simple-sidebar.css" rel="stylesheet">
     <link href="/resources/css/average.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -49,7 +48,7 @@
 
             <div class="form-group">
                 <label for="humidity" class="col-md-3 control-label"><strong>Humidity</strong></label>
-                <div class="data_view" id="average_humiditiy" name="humidity"></div>
+                <div class="data_view" id="average_humidity" name="humidity"></div>
             </div>
         </div>
     </div>
@@ -58,6 +57,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/average.js"></script>
 
 </body>
 
