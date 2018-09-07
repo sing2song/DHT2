@@ -31,4 +31,13 @@ public class InputDataRestController {
         averageService.setAverageData(data);
         dataService.insertData(data);
     }
+    @RequestMapping(value = "/rest/initial", method = RequestMethod.GET)
+    public void InputInitialData(@RequestParam String user_id) {
+        LOGGER.debug("InputInitialData");
+        Data data = new Data();
+        data.setUser_id(user_id);
+        data.setTemperature(1);
+        data.setHumidity(1);
+        dataService.insertData(data);
+    }
 }

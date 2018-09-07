@@ -18,6 +18,7 @@ var heat=0;
 var humid=0;
 var dehumid=0;
 
+
 $('#air_btn_on').click(function() {
     air=1;
     $.post('/rest/device?airconditioner='+1, {

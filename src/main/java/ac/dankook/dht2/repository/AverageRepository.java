@@ -10,4 +10,5 @@ public interface AverageRepository {
     List<String> getHumidity(Data data);
     void insertAverageData(AverageData averageData);
     AverageData getAverageData(String user_id);
+    List<String> getDate(Data data);
 }

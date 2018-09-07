@@ -8,8 +8,4 @@
       FROM USERDATA
       where user_id=#{id};
     </select>
-    <insert id="insertData">
-      INSERT INTO INPUTDATA(user_id,order_no,temperature,humidity,create_date,update_date)
-      VALUES (#{user_id},1,#{temperature},#{humidity},Now(),Now());
-    </insert>
 </mapper>

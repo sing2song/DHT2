@@ -1,8 +1,8 @@
 package ac.dankook.dht2.data;
 
 public class User {
-    String user_id;
-    String user_password;
+    private String user_id;
+    private String user_password;
 
     public String getUser_id() {
         return user_id;

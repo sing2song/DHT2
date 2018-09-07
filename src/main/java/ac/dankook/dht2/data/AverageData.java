@@ -1,9 +1,14 @@
 package ac.dankook.dht2.data;
 
 public class AverageData {
-    public String user_id;
-    public int average_temperature;
-    public int average_humidity;
+    private String user_id;
+    private int average_temperature;
+    private int average_humidity;
+    private String update_date;
+
+    public String getUpdate_date() { return update_date; }
+
+    public void setUpdate_date(String update_date) { this.update_date = update_date; }
 
     public int getAverage_temperature() {
         return average_temperature;

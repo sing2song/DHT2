@@ -1,10 +1,7 @@
 'use strict';
 var user_id;
-$(document).ready(function() {
-    console.log(getCookie('user_id'));
-    console.log(user_id);
-})
 $('#input').click(function() {
+    getCookie("user_id");
     var temperature=$('#temperature').val();
     var humidity=$('#humidity').val();
     $.get('/rest/insert',{

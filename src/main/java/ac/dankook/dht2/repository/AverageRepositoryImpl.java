@@ -20,11 +20,12 @@ public class AverageRepositoryImpl implements AverageRepository {
     public List<String> getHumidity(Data data) {
         return sqlSession.selectList("dataMapper.getHumidity", data);
     }
+    public List<String> getDate(Data data) { return sqlSession.selectList("dataMapper.getDate",data);}
     public void insertAverageData(AverageData averageData) {
-        sqlSession.selectOne("dataMapper.insertAverageData",averageData);
+        sqlSession.selectOne("dataSetMapper.insertAverageData",averageData);
     }
     public AverageData getAverageData(String user_id) {
-        return sqlSession.selectOne("dataMapper.getAverageData",user_id);
+        return sqlSession.selectOne("dataSetMapper.getAverageData",user_id);
     }
 
 }

@@ -2,6 +2,7 @@
 var user_id;
 var avgTemp;
 var avgHumid;
+var updateDate;
 $(document).ready(function () {
     getCookie("user_id");
     console.log("average.js");
@@ -11,12 +12,11 @@ $(document).ready(function () {
         console.log(result);
         avgTemp=result.average_temperature;
         avgHumid=result.average_humidity;
-        console.log(avgTemp);
-        console.log(avgHumid);
+        updateDate=result.update_date;
+        $('#date').text(updateDate);
         $('#average_temperature').text(avgTemp);
         $('#average_humidity').text(avgHumid);
     });
-
 });
 var getCookie = function(name) {
     var cookie = document.cookie;
