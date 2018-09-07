@@ -2,22 +2,21 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dataMapper" >
-    <select id = "getTemperature" resultType="String">
+<mapper namespace="dataMapper">
+    <select id="getTemperature" resultType="String">
       SELECT temperature
       FROM INPUTDATA
       WHERE user_id=#{user_id}
       ORDER BY input_data_no
       DESC LIMIT 5;
     </select>
-    <select id = "getHumidity" resultType="String">
+    <select id="getHumidity" resultType="String">
         SELECT humidity
         FROM INPUTDATA
         WHERE user_id=#{user_id}
         ORDER BY input_data_no
         DESC LIMIT 5;
     </select>
-
     <select id="getDate" resultType="String">
         SELECT update_date
         FROM AVERAGEDATA

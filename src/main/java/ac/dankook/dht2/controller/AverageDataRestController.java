@@ -17,7 +17,7 @@ public class AverageDataRestController {
     @Autowired
     AverageService averageService;
 
-    @RequestMapping(value = "rest/average", method = RequestMethod.POST)
+    @RequestMapping(value = "/rest/average", method = RequestMethod.POST)
     public AverageData setAverageData(@RequestParam String user_id) {
         LOGGER.debug("AverageDataRestController");
         return averageService.getAverageData(user_id);
