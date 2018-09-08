@@ -4,5 +4,6 @@
     <mappers>
         <mapper resource="/mybatis/signin-mapper"/>
         <mapper resource="/mybatis/data-mapper.xml"/>
+        <mapper resource="/mybatis/dataset-mapper.xml"/>
     </mappers>
 </configuration >

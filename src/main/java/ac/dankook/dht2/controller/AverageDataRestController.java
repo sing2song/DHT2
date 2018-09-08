@@ -17,13 +17,10 @@ public class AverageDataRestController {
     @Autowired
     AverageService averageService;
 
-    @RequestMapping(value = "rest/average", method = RequestMethod.POST)
-    public void setAverageData(@RequestParam short average_temperature, @RequestParam short average_humidity) {
+    @RequestMapping(value = "/rest/average", method = RequestMethod.POST)
+    public AverageData setAverageData(@RequestParam String user_id) {
         LOGGER.debug("AverageDataRestController");
-        AverageData averageData = new AverageData();
-        averageData.setAverage_temperature(average_temperature);
-        averageData.setAverage_humidity(average_humidity);
-        averageService.getAverageData(averageData);
+        return averageService.getAverageData(user_id);
     }
 
 

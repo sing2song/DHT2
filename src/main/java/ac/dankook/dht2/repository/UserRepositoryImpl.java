@@ -11,7 +11,6 @@ public class UserRepositoryImpl implements UserRepository {
     public SqlSession sqlSession;
 
     public User getPassword(String id) {
-        System.out.println("User");
         return sqlSession.selectOne("signInMapper.getPassword", id);
     }
 

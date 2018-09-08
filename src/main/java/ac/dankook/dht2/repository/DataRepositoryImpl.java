@@ -13,12 +13,10 @@ public class DataRepositoryImpl implements DataRepository{
     private SqlSession sqlSession;
 
     public User insertData(Data data) {
-        System.out.println("insertData");
-        return sqlSession.selectOne("signInMapper.insertData",data);
+        return sqlSession.selectOne("dataSetMapper.insertData",data);
     }
 
     public User setState(Device device) {
-        System.out.println("setState");
-        return sqlSession.selectOne("dataMapper.insertDeviceData",device);
+        return sqlSession.selectOne("dataSetMapper.insertDeviceData",device);
     }
 }

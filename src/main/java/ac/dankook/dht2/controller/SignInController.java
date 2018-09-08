@@ -1,6 +1,8 @@
 package ac.dankook.dht2.controller;
 
+import ac.dankook.dht2.data.Data;
 import ac.dankook.dht2.data.User;
+import ac.dankook.dht2.service.DataService;
 import ac.dankook.dht2.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +24,7 @@ public class SignInController {
     @Autowired
     private UserService userService;
     private static final Logger LOGGER = LoggerFactory.getLogger(SignInController.class);
+    DataService dataService;
 
     @RequestMapping("")
     public String index() {
@@ -30,10 +33,8 @@ public class SignInController {
 
     @RequestMapping("signin")
     @ResponseBody
-    public String signIn(@RequestParam String user_id, @RequestParam String user_password, HttpServletResponse response) {
-        Cookie cookie = new Cookie("name", user_id);
-        cookie.setMaxAge(60 * 60 * 24);
-        response.addCookie(cookie);
+    public  String signIn(@RequestParam String user_id, @RequestParam String user_password,HttpServletResponse response) {
+        makeCookie(user_id,response);
         User user = new User();
         user.setUser_id(user_id);
         user.setUser_password(user_password);
@@ -46,5 +47,10 @@ public class SignInController {
             LOGGER.debug("failed");
             return null;
         }
+    }
+    private void makeCookie(String user_id, HttpServletResponse response) {
+        Cookie cookie = new Cookie("name", user_id);
+        cookie.setMaxAge(60 * 60 * 24);
+        response.addCookie(cookie);
     }
 }

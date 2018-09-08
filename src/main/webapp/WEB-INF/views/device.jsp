@@ -39,8 +39,8 @@
             </div>
 
             <div class="form-group">
-                <label for="airconditional" class="col-md-3 control-label"><strong>Airconditional</strong></label>
-                <div class="data_view" name="airconditional">
+                <label for="airconditioner" class="col-md-3 control-label"><strong>Airconditioner</strong></label>
+                <div class="data_view" name="airconditioner">
                     <button id="air_btn_on">ON</button>
                     <button id="air_btn_off">OFF</button>
                 </div>
@@ -48,7 +48,7 @@
 
             <div class="form-group">
                 <label for="heater" class="col-md-3 control-label"><strong>Heater</strong></label>
-                <div class="data_view" name="airconditional">
+                <div class="data_view" name="heater">
                     <button id="heat_btn_on">ON</button>
                     <button id="heat_btn_off">OFF</button>
                 </div>
@@ -56,7 +56,7 @@
 
             <div class="form-group">
                 <label for="humidifier" class="col-md-3 control-label"><strong>Humidifier</strong></label>
-                <div class="data_view" name="airconditional">
+                <div class="data_view" name="humidifier">
                     <button id="humid_btn_on">ON</button>
                     <button id="humid_btn_off">OFF</button>
                 </div>
@@ -64,7 +64,7 @@
 
             <div class="form-group">
                 <label for="dehumidifier" class="col-md-3 control-label"><strong>Dehumidifier</strong></label>
-                <div class="data_view" name="airconditional">
+                <div class="data_view" name="dehumidifier">
                     <button id="dehumid_btn_on">ON</button>
                     <button id="dehumid_btn_off">OFF</button>
                 </div>
