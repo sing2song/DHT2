@@ -4,7 +4,7 @@ $('#input').click(function() {
     getCookie("user_id");
     var temperature=$('#temperature').val();
     var humidity=$('#humidity').val();
-    $.get('/rest/insert',{
+    $.post('/rest/insert',{
         user_id: user_id,
         temperature: temperature,
         humidity: humidity

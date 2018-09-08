@@ -24,7 +24,9 @@ public class AverageServiceImpl implements AverageService {
         return averageRepository.getHumidity(data);
     }
 
-    public List<String> getDate(Data data) { return averageRepository.getDate(data); }
+    public List<String> getDate(Data data) {
+        return averageRepository.getDate(data);
+    }
 
     public void setAverageData(Data data) {
         AverageData averageData;
@@ -43,8 +45,14 @@ public class AverageServiceImpl implements AverageService {
         List<String> getDate = this.getDate(data);
         int tempSum = 0, humidSum = 0;
         int count = 0;
-        for (int i = 0; i < getTempData.size(); i++) {
-            if (Integer.parseInt(getTempData.get(i)) != 1) {
+        LOGGER.debug("getTempData.size():" + getTempData.size());
+        if (getTempData.size() == 0) {
+            tempSum = 1;
+            humidSum = 1;
+            count = 1;
+        }
+        else {
+            for (int i = 0; i < getTempData.size(); i++) {
                 count++;
                 tempSum += Integer.parseInt(getTempData.get(i));
                 humidSum += Integer.parseInt(getHumidData.get(i));

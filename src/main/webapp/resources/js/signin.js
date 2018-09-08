@@ -10,7 +10,7 @@ $('#btn').click(function() {
     }, function (result) {
         if(result === "input") {
             getCookie("user_id");
-            $.get('/rest/initial', {
+            $.post('/rest/initial', {
                 user_id:user_id
             });
             location.href = result;

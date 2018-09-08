@@ -31,7 +31,7 @@ public class InputDataRestController {
         averageService.setAverageData(data);
         dataService.insertData(data);
     }
-    @RequestMapping(value = "/rest/initial", method = RequestMethod.GET)
+    @RequestMapping(value = "/rest/initial", method = RequestMethod.POST)
     public void InputInitialData(@RequestParam String user_id) {
         LOGGER.debug("InputInitialData");
         Data data = new Data();

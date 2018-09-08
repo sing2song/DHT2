@@ -6,14 +6,14 @@
     <select id="getTemperature" resultType="String">
       SELECT temperature
       FROM INPUTDATA
-      WHERE user_id=#{user_id}
+      WHERE user_id=#{user_id} AND NOT temperature=1
       ORDER BY input_data_no
       DESC LIMIT 5;
     </select>
     <select id="getHumidity" resultType="String">
         SELECT humidity
         FROM INPUTDATA
-        WHERE user_id=#{user_id}
+        WHERE user_id=#{user_id} AND NOT humidity=1
         ORDER BY input_data_no
         DESC LIMIT 5;
     </select>
